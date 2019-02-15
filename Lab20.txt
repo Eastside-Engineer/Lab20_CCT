@@ -1,0 +1,18 @@
+1.	SELECT *FROM customers;
+2.	SELECT distinct Country FROM northwind.customers;
+3.	SELECT * FROM northwind.customers WHERE CustomerID LIKE 'BL%';
+4.	SELECT * FROM northwind.orders LIMIT 0, 100;
+5.	SELECT * FROM northwind.customers WHERE PostalCode = "1010" OR PostalCode = "3012" OR PostalCode = "12209" OR PostalCode = "05023";
+6.	SELECT * FROM northwind.orders WHERE ShipRegion IS null;
+7.	SELECT * FROM northwind.customers ORDER BY Country , City;
+8.	INSERT INTO customers (CustomerID, CompanyName, ContactName) VALUES ('AAAA', 'AAA' , 'Aaliyah Averson');
+9.	UPDATE orders SET ShipRegion = 'France'WHERE ShipRegion = 'EuroZone';
+10.	DELETE FROM `order details` WHERE Quantity = 1;
+11.	SELECT AVG(Quantity), MAX(Quantity) , MIN(Quantity) FROM northwind.`order details`;
+12.	SELECT AVG(Quantity), MAX(Quantity) , MIN(Quantity) FROM northwind.`order details` GROUP BY OrderID;
+13.	SELECT CustomerID FROM northwind.orders WHERE OrderID = 10290;
+14.	SELECT * FROM customers INNER JOIN orders ON customers.CustomerID = orders.CustomerID;
+a.	SELECT * FROM customers LEFT JOIN orders ON customers.CustomerID = orders.CustomerID;
+b.	SELECT * FROM customers RIGHT JOIN orders ON customers.CustomerID = orders.CustomerID;
+15.	SELECT FirstName FROM northwind.employees WHERE ReportsTo IS null;
+16.	SELECT FirstName FROM northwind.employees WHERE ReportsTo = 2;
